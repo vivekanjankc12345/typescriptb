@@ -1,5 +1,5 @@
 import { Box, Button, Flex, FormLabel, Input, Text, useToast } from '@chakra-ui/react';
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { postregister } from '../Redux/action';
 import { useNavigate } from 'react-router-dom';
@@ -13,6 +13,7 @@ const Register = () => {
       const toast = useToast()
       const reg=useSelector((store)=>store.register)
       console.log(reg)
+    
       const register=()=>{
         if(username!==""&&email!=="" &&password)
         {
@@ -28,7 +29,7 @@ const Register = () => {
                 isClosable: true,
               })
         }
-       
+      
        
     }
     const navigate=useNavigate()

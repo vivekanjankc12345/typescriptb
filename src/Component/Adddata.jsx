@@ -42,7 +42,7 @@ navigate("/login")
    }
   return (
     <Box>
-    <Text textAlign={"center"} fontSize={"30px"} >ADD DATA</Text>
+    <Text textAlign={"center"} fontSize={"30px"} >ADD PRODUCT</Text>
     <Box ml={"40%"} mt={"2%"} border={"1px solid gray"} w={"30%"} borderRadius={"7%"}>
         <Box mt={"2%"}>
             <FormLabel mt={"3%"} ml={"2%"}>Image_url</FormLabel>

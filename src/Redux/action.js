@@ -23,9 +23,9 @@ function posterrorapi(payload)
 }
 function postregister(data)
 {
-    return function (dispatch){
+    return  function (dispatch){
         dispatch(postrequestapi())
-        return axios
+        return  axios
         .post("https://dark-puce-chipmunk-hat.cyclic.app/user/register",data)
         .then((res)=>{
             console.log(res.data.message)

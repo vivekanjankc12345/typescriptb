@@ -12,7 +12,7 @@ const Homepage = () => {
     const [sort,setsort]=useState("")
     const [search,setsearch]=useState("")
     const log=useSelector((store)=>store.login)
-    console.log(log[0].username)
+    // console.log(log[0].username)
     useEffect(()=>{
         if(sort!=="")
         {
@@ -47,24 +47,30 @@ navigate("/login")
     const addpage=()=>{
 navigate("/adddata")
     }
+    const home1=()=>{
+        navigate("/")
+    }
   return (
     <>
-<Box w="100%" border="1px solid red" h="90px">
+<Box w="100%" border="1px solid aquamarine" h="90px" id='navbar'>
 <Flex>
-    <Box ml={"10%"} mt={"1%"}>
+<Box ml={"10%"} mt={"1%"}>
+    <Text onClick={home1} color={"tear"} fontSize={"30px"} >BrainerHub Solutions</Text>
+</Box>
+    <Box ml={"6%"} mt={"1%"}>
         <Button onClick={login}>Login</Button>
     </Box>
     <Box ml={"5%"} mt={"1%"}>
         <Button onClick={register}>Register</Button>
     </Box>
     <Box ml={"5%"} mt={"1%"}>
-        <Button onClick={addpage}>Adddata</Button>
+        <Button onClick={addpage}>Addproducts</Button>
     </Box>
     <Box ml={"5%"} mt={"1%"}>
         <Input placeholder='search by name' type='text' value={search} onChange={(e)=>setsearch(e.target.value)}  />
     </Box>
     <Box ml={"2%"} mt={"1%"}>
-        {log[0].username}
+        { log.length>0&&log[0].username}
     </Box>
 </Flex>
 </Box>
@@ -76,9 +82,9 @@ navigate("/adddata")
         </Select>
         <Box>
 <Flex ml={"150%"} mt={"2%"}>
-<button style={{width:"100px",height:"40px", border:"1px solid red",borderRadius:"10px",color:"white",background:"red"}} onClick={des} disabled={count===1}>Prev</button>
+<button style={{width:"200px",height:"40px", border:"1px solid red",borderRadius:"10px",color:"white",background:"red"}} onClick={des} disabled={count===1}>Prev</button>
     <Text ml={"1%"} mr={"1%"}>{count}</Text>
-    <button style={{width:"100px",height:"40px", border:"1px solid red",borderRadius:"10px",color:"white",background:"red"}} onClick={inc} >next</button>
+    <button style={{width:"200px",height:"40px", border:"1px solid red",borderRadius:"10px",color:"white",background:"red"}} onClick={inc} >next</button>
 </Flex>
     
 </Box> 
